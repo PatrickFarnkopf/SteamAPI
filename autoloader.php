@@ -2,7 +2,7 @@
 
 function __autoload($namespace)
 {
-    $path = str_replace("\\", DIRECTORY_SEPERATOR, $namespace);
+    $path = sprintf("%s/src/%s", __DIR__, str_replace("\\", DIRECTORY_SEPARATOR, $namespace));
     $possibleFilename = sprintf("%s.php", $path);
 
     if (file_exists($possibleFilename))

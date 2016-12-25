@@ -2,4 +2,9 @@
 
 require_once '../loader.php';
 
-// Todo: perform test
+$api = new API(SteamApiConfig::API_URL, SteamApiConfig::API_KEY);
+$userApi = new \Users\Implementation\SteamUser($api);
+
+$response = $userApi->GetPlayerSummaries([76561198017244914]); // my steam id
+
+print_r($response);
