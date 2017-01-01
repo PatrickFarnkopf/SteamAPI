@@ -1,10 +1,12 @@
 <?php
 
-namespace UserAPI;
+namespace UsersAPI;
 
 use \UsersAPI\Implementation\SteamUser;
+use \API;
+use \SteamApiConfig;
 
-final class ContextUserAPI
+class ContextUserAPI
 {
     private static $steamUser;
 
@@ -15,7 +17,7 @@ final class ContextUserAPI
     public static function SteamUser()
     {
         if (self::$steamUser == null)
-            self::$steamUser = new SteamUser();
+            self::$steamUser = new SteamUser(new API(SteamApiConfig::API_URL, SteamApiConfig::API_KEY));
         return self::$steamUser;
     }
 }
