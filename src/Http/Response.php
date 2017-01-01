@@ -15,4 +15,9 @@ class Response
     {
         return $this->raw;
     }
+
+    public function getResult()
+    {
+        return json_decode($this->raw);
+    }
 }
