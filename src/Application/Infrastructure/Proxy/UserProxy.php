@@ -41,6 +41,7 @@ class UserProxy extends User
                 $this->setCountrycode($player->loccountrycode);
 
                 $this->isloaded = true;
+                return;
             }
         }
     }
