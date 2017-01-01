@@ -23,6 +23,7 @@ class UserProvider
         $result = [];
 
         $call = \UsersAPI\ContextUserAPI::SteamUser()->getFriendList($steamId)->getResult();
+
         $friends = $call->friendslist->friends;
 
         foreach ($friends as $friend)

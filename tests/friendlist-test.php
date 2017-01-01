@@ -2,7 +2,6 @@
 
 require_once '../loader.php';
 
-
 // Test 1
 $api = new API(SteamApiConfig::API_URL, SteamApiConfig::API_KEY);
 $userApi = new \UsersAPI\Implementation\SteamUser($api);
