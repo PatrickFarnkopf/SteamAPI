@@ -3,6 +3,8 @@
 namespace Steam\Application\Infrastructure;
 
 use \Steam\UsersAPI\ISteamUser;
+use \Steam\Application\Games\IGame;
+use \Steam\Http\Request;
 
 class UserProvider
 {
@@ -59,5 +61,13 @@ class UserProvider
         }
 
         return $result;
+    }
+
+    public function getGameInventory(IGame $game, $steamid)
+    {
+        $request = new Request($game->getInventoryUrl($steamid));
+        $response = $request->send();
+
+        return $response->getResult();
     }
 }
