@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\Model;
+namespace Steam\Application\Model;
 
 class User
 {

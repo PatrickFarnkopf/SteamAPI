@@ -1,6 +1,6 @@
 <?php
 
-namespace UsersAPI;
+namespace Steam\UsersAPI;
 
 interface ISteamUser
 {

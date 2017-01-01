@@ -1,6 +1,6 @@
 <?php
 
-namespace Http;
+namespace Steam\Http;
 
 class Request
 {

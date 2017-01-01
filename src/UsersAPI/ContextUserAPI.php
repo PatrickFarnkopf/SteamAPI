@@ -1,9 +1,9 @@
 <?php
 
-namespace UsersAPI;
+namespace Steam\UsersAPI;
 
-use \UsersAPI\Implementation\SteamUser;
-use \API;
+use \Steam\UsersAPI\Implementation\SteamUser;
+use \Steam\API;
 use \SteamApiConfig;
 
 class ContextUserAPI

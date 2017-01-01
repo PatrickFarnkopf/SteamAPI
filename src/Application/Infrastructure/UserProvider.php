@@ -1,8 +1,8 @@
 <?php
 
-namespace Application\Infrastructure;
+namespace Steam\Application\Infrastructure;
 
-use \UsersAPI\ISteamUser;
+use \Steam\UsersAPI\ISteamUser;
 
 class UserProvider
 {
@@ -22,7 +22,7 @@ class UserProvider
     {
         $result = [];
 
-        $call = \UsersAPI\ContextUserAPI::SteamUser()->getFriendList($steamId)->getResult();
+        $call = \Steam\UsersAPI\ContextUserAPI::SteamUser()->getFriendList($steamId)->getResult();
 
         $friends = $call->friendslist->friends;
 
@@ -44,7 +44,7 @@ class UserProvider
         }
 
         // now get raw data
-        $response = \UsersAPI\ContextUserAPI::SteamUser()->getPlayerSummaries($steamids)->getResult();
+        $response = \Steam\UsersAPI\ContextUserAPI::SteamUser()->getPlayerSummaries($steamids)->getResult();
 
         $result = [];
 

@@ -1,5 +1,7 @@
 <?php
 
+namespace Steam;
+
 class API
 {
     const FORMAT_JSON    = 'json';

@@ -1,8 +1,8 @@
 <?php
 
-namespace UsersAPI\Implementation;
+namespace Steam\UsersAPI\Implementation;
 
-use \UsersAPI\ISteamUser;
+use \Steam\UsersAPI\ISteamUser;
 
 class SteamUser implements ISteamUser
 {

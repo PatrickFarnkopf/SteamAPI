@@ -1,10 +1,10 @@
 <?php
 
-namespace Application\Infrastructure\Proxy;
+namespace Steam\Application\Infrastructure\Proxy;
 
-use \Application\Model\User;
-use \UsersAPI\ContextUserAPI;
-use \UsersAPI\ISteamUser;
+use \Steam\Application\Model\User;
+use \Steam\UsersAPI\ContextUserAPI;
+use \Steam\UsersAPI\ISteamUser;
 
 class UserProxy extends User
 {

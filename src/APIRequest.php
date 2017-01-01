@@ -1,7 +1,9 @@
 <?php
 
-use \Http\Request;
-use \Http\Response;
+namespace Steam;
+
+use \Steam\Http\Request;
+use \Steam\Http\Response;
 
 class APIRequest
 {

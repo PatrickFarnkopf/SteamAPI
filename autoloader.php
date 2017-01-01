@@ -2,6 +2,7 @@
 
 function __autoload($namespace)
 {
+    $namespace = str_replace("Steam\\", "", $namespace);
     $path = sprintf("%s/src/%s", __DIR__, str_replace("\\", DIRECTORY_SEPARATOR, $namespace));
     $possibleFilename = sprintf("%s.php", $path);
 
