@@ -17,8 +17,23 @@ class API
         $this->baseUrl = $baseUrl;
     }
 
+    public function isAvailable()
+    {
+        $host = str_replace(["http", ":", "/"], "", $this->baseUrl);
+        if ($socket = @fsockopen($host, 80, $errno, $errstr, 5))
+        {
+            fclose($socket);
+            return true;
+        }
+
+        return false;
+    }
+
     public function getNewRequest()
     {
+        if (!$this->isAvailable())
+            throw new \Exception("SteamAPI is not available!");
+
         $request = new APIRequest();
         $request->setBaseUrl($this->baseUrl);
         $request->addParameter("key", $this->key);
